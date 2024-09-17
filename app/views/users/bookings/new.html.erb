@@ -1,0 +1,11 @@
+<% content_for :title, "New booking" %>
+
+<h1>New booking</h1>
+
+<%= render "form", user: @user, booking: @booking %>
+
+<br>
+
+<div>
+  <%= user_bookings_link %>
+</div>

@@ -1,0 +1,30 @@
+<h3>Hello Users</h3>
+<div>
+  <div style="width: 50%;  float:left;">
+    <h1>Users</h1>
+
+    <div id="users">
+      <% @users.each do |user| %>
+        <%= render partial: "users/users/user", locals: {user: user} %>
+        <p>
+          <%= link_to "Show this user", user %>
+        </p>
+      <% end %>
+    </div>
+    <%= link_to "New user", new_user_path %>
+  </div>
+  <div style="width: 50%;  float:right;">
+    <h1>Events</h1>
+
+    <div id="events">
+      <% @events.each do |event| %>
+        <%= render event %>
+        <p>
+          <%= link_to "Show this event", event %>
+        </p>
+      <% end %>
+    </div>
+
+    <%= link_to "New event", new_event_path %>
+  </div>
+</div>
